@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "react-confirm-alert/src/react-confirm-alert.css";
+// import "react-confirm-alert/src/react-confirm-alert.css";
 import { RouteName } from "../RouteName";
+import "../components/vendors/styles/styles.css";
 
 const App: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ const App: React.FC = () => {
     //   </Switch>
     // </Router>
 
-    <div>Hello</div>
+    <div className="fw-800 letter-spacing-D1em">PRODUCTS</div>
   );
 };
 

@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography and Backgrounds*/
+
+@font-face{
+    font-family: Satoshi;
+    src: url(../fonts/Satoshi-Regular.ttf);
+}
+
+* {
+    font-family: Satoshi;
+    font-size: 30px;
+}
+.bg-white{
+    background-color: #FFFFFF;
+}
+.bg-faded-grey{
+    background-color: #F7F7F7;
+}
+.bg-grey{
+    background-color: #969191;
+}
+.bg-blue{
+    background-color: #001EB9;
+}
+.bg-black{
+    background-color: #162427;
+}
+.fc-white{
+    color: #FFFFFF;
+}
+.fc-faded-grey{
+    color: #F7F7F7;
+}
+.fc-grey{
+    color: #969191;
+}
+.fc-blue{
+    color: #001EB9;
+}
+.fc-black{
+    color: #162427;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-500{
+    font-weight: 500;
+}
+
+.letter-spacing-D1em{
+    letter-spacing: 0.1em;
+}

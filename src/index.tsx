@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./Components/App";
-import * as serviceWorker from "./serviceWorker";
+import App from "./components/App.tsx";
+// import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.Fragment>
@@ -11,4 +11,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-serviceWorker.unregister();
+// serviceWorker.unregister();
