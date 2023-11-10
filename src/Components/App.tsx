@@ -61,19 +61,21 @@ const App: React.FC = () => {
         </Route>
 
         <Route path="/">
-          <Auth>
-            <div className="page-container">
-              <div className="content-wrap">
-                <Router>
-                  <Switch>
-                    <Route path="/home">
-                      <MainPage />
-                    </Route>
-                  </Switch>
-                </Router>
-              </div>
+          {/* <Auth> */}
+          <div className="page-container">
+            <div className="content-wrap">
+              <Router>
+                <Switch>
+                  <Route path="/home">
+                    <MainPage />
+                  </Route>
+                  <Redirect from="/" to="/home" />
+                </Switch>
+              </Router>
             </div>
-          </Auth>
+          </div>
+
+          {/* </Auth> */}
         </Route>
       </Switch>
     </Router>

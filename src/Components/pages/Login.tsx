@@ -93,7 +93,10 @@ const LoginPage: React.FC = () => {
   }
 
   return (
-    <div className="container d-flex align-items-center justify-content-center">
+    <div
+      className="container d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
       <div className="card p-4 shadow">
         <h2 className="text-center mb-4">Login</h2>
         <form onSubmit={submitLogin}>

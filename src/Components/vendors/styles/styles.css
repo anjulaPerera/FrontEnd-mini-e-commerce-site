@@ -13,7 +13,6 @@
 
 * {
     font-family: Satoshi;
-    font-size: 30px;
 }
 .bg-white{
     background-color: #FFFFFF;
@@ -55,7 +54,86 @@
 .fw-500{
     font-weight: 500;
 }
+.fw-700{
+    font-weight: 700;
+}
 
 .letter-spacing-D1em{
     letter-spacing: 0.1em;
+}
+
+
+.profile-image{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+
+.mr-4 {
+    margin-right: 16px;
+}
+.mr-2 {
+    margin-right: 8px;
+}
+.ml-2 {
+    margin-left: 8px;
+}
+
+.mr-50{
+    margin-right: 62px;
+}
+
+.online{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00FF00;
+}
+
+.page-topic{
+    /* font-size: 24px; */
+    line-height: 29px;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+}
+
+.search-box{
+    height: 60px;
+    border-radius: 50px;
+}
+
+.search-btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: none !important;
+}
+
+.add-new-and-add-fav{
+    height: 60px;
+}
+
+.br-10{
+    border-radius: 10px;
+}
+
+.pl-0{
+    padding-left: 0 !important;
+}
+
+.add-fav{
+    border: 1px solid #001EB9;
+}
+
+.star{
+    transform: scale(2);
 }
