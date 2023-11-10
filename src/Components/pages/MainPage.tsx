@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faTrash,
+  faPen,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
 const MainPage: React.FC = () => {
   return (
@@ -44,29 +48,67 @@ const MainPage: React.FC = () => {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th
+                scope="col"
+                className="fc-blue letter-spacing-D1em extra-bold"
+              >
+                SKU
+              </th>
+              <th
+                scope="col"
+                className="fc-blue letter-spacing-D1em extra-bold"
+              >
+                IMAGE
+              </th>
+              <th
+                scope="col"
+                className="fc-blue letter-spacing-D1em extra-bold"
+              >
+                PRODUCT NAME
+              </th>
+              <th
+                scope="col"
+                className="fc-blue letter-spacing-D1em extra-bold"
+              >
+                QUANTITY
+              </th>
+              <th
+                scope="col"
+                className="fc-blue letter-spacing-D1em extra-bold"
+              ></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan={2}>Larry the Bird</td>
-              <td>@twitter</td>
+              <td scope="row">#CA25</td>
+              <td>image</td>
+              <td className="w-26">Plastic Bottle</td>
+              <td>9</td>
+              <td className="w-0">
+                <div className="w-100 h-100 d-flex p-5 justify-content-end align-items-center">
+                  <div className="delete">
+                    <FontAwesomeIcon
+                      icon={faTrash}
+                      style={{ color: "#001EB9" }}
+                      className="p-2"
+                    />
+                  </div>
+                  <div className="edit">
+                    <FontAwesomeIcon
+                      icon={faPen}
+                      style={{ color: "#001EB9" }}
+                      className="p-2"
+                    />
+                  </div>
+                  <div className="fav">
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      style={{ color: "#001EB9" }}
+                      className="p-2"
+                    />
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
