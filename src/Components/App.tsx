@@ -1,70 +1,83 @@
-import React, { useState } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import "react-confirm-alert/src/react-confirm-alert.css";
-import { RouteName } from "../RouteName";
-import "../components/vendors/styles/styles.css";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import LoginPage from "./pages/Login";
+import NavBar from "./common/NavBar";
+import MainPage from "./pages/MainPage";
+import Auth from "./common/Auth";
+import AddProduct from "./pages/AddProduct";
+import EditProduct from "./pages/EditProduct";
+import FavsPage from "./pages/FavsPage";
+import SearchResults from "./pages/SearchResults";
+
+// const App: React.FC = () => {
+//   return (
+//     <Router>
+//       <NavBar />
+//       <Switch>
+//         <Route path="/login">
+//           <LoginPage />
+//         </Route>
+//         <Route path="/">
+//           <Auth>
+//             <Route path="/home">
+//               <MainPage />
+//             </Route>
+//             <Route path="/add-product">
+//               <AddProduct />
+//             </Route>
+//             <Route path="/update-product">
+//               <EditProduct />
+//             </Route>
+//             <Route path="/favorites">
+//               <FavsPage />
+//             </Route>
+//             <Route path="/products">
+//               <SearchResults searchQuery="abc" searchResults={[]} />
+//             </Route>
+//             <Route path="/search-results">
+//               <MainPage />
+//             </Route>
+//           </Auth>
+//         </Route>
+//       </Switch>
+//     </Router>
+//   );
+// };
+
+// export default App;
 
 const App: React.FC = () => {
   return (
-    // <Router>
-    //   <Switch>
-    //     <Route path={RouteName.LOGIN}>{/* <Login /> */}</Route>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route path="/login">
+          <LoginPage />
+        </Route>
 
-    //     <Route path="/">
-    //       {/* <Auth> */}
-
-    //       <div className="page-container">
-    //         <div className="content-wrap">
-    //           <Router>
-    //             <Switch>
-    //               <Route path="/admin">
-    //                 {/* <VerifyRole allow={[Role.SUPER_ADMIN]}> */}
-    //                 {/* <SuperAdminRouter /> */}
-    //                 {/* </VerifyRole> */}
-    //               </Route>
-    //             </Switch>
-    //           </Router>
-    //         </div>
-    //         {/* <Footer /> */}
-    //       </div>
-
-    //       {/* </Auth> */}
-    //     </Route>
-    //   </Switch>
-    // </Router>
-
-    <div className="fw-800 letter-spacing-D1em">PRODUCTS</div>
+        <Route path="/">
+          <Auth>
+            <div className="page-container">
+              <div className="content-wrap">
+                <Router>
+                  <Switch>
+                    <Route path="/home">
+                      <MainPage />
+                    </Route>
+                  </Switch>
+                </Router>
+              </div>
+            </div>
+          </Auth>
+        </Route>
+      </Switch>
+    </Router>
   );
 };
-
-// const SuperAdminRouter: React.FC = () => {
-//   return (
-//     // <ContentLayout>
-//     <Router>
-//       <Route
-//         path={[
-//           RouteName.ADMIN_USER_MANAGEMENT,
-//           RouteName.ADMIN_DEMO_USERS,
-//           RouteName.ADMIN_SUBSCRIPTIONS,
-//           RouteName.ADMIN_USER_MANAGEMENT_TournamentList,
-//           RouteName.ADMIN_USER_MANAGEMENT_Tournament,
-//         ]}
-//         exact
-//         render={() => <>{/* <NavBar /> */}</>}
-//       />
-//       {/* <Content> */}
-//       <Switch>
-//         <Route path={RouteName.ADMIN_USER_MANAGEMENT}>
-//           {/* <UserManagement /> */}
-//         </Route>
-
-//         <Route path="*">{/* <NotFound /> */}</Route>
-//       </Switch>
-//       {/* </Content> */}
-//     </Router>
-//     // </ContentLayout>
-//   );
-// };
 
 export default App;

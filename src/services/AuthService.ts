@@ -41,7 +41,7 @@ export class AuthService {
     );
 
     if (res.success) {
-      localStorage.setItem(AuthService.TOKEN_KEY, res.data.token); //TODO read token from cookie and remove this implementation
+      localStorage.setItem(AuthService.TOKEN_KEY, res.data.token); 
     }
 
     return res;
