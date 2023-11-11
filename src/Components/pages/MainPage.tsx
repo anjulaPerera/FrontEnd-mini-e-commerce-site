@@ -81,7 +81,11 @@ const MainPage: React.FC = () => {
           <tbody>
             <tr>
               <td scope="row">#CA25</td>
-              <td>image</td>
+              <td>
+                <div className="d-flex p-1 img-wrapper">
+                  <img src="/vendors/images/car.png" alt="car" />
+                </div>
+              </td>
               <td className="w-26">Plastic Bottle</td>
               <td>9</td>
               <td className="w-0">
